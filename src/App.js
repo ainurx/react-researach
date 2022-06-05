@@ -1,9 +1,27 @@
+// Lib
+import {
+  BrowserRouter,
+  Routes, 
+  Route
+} from 'react-router-dom'
+
+// Commmon
+import Constants from './common/Constants' 
+
+// Components
+import MainNavigation from './components/MainNavigation';
+
+// Pages
+import Main from './pages/Main/Main'
+
 function App() {
   return (
-    <div className="text-center">
-      <h1>React Research</h1>
-      <p>Purpose of this repository is to help someone to geting more <u>understanding</u> about <b>React JS</b></p>
-    </div>
+    <BrowserRouter>  
+      <MainNavigation />
+      <Routes>
+        <Route exact path={Constants.Url.Main} element={<Main/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
