@@ -1,6 +1,10 @@
+import Form from '../../components/RefResearch/Form'
+
 function MainRef() {
   return (
-    <div>Main</div>
+    <div>
+      <Form/>
+    </div>
   )
 }
 
